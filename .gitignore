@@ -30,3 +30,6 @@ lerna-debug.log*
 .env
 .env.production
 
+# do not commit the completion files
+completions/_cargo
+completions/_rustup
