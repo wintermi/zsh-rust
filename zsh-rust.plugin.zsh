@@ -19,7 +19,7 @@ fi
 
 # Completion directory for `rustup` and `cargo` commands once they have been generated
 ZSH_RUST_DIR="${0:A:h}/completions"
-rustup completions zsh >| "$ZSH_RUST_DIR/_rustup"
+rustup completions zsh rustup >| "$ZSH_RUST_DIR/_rustup"
 cp -f "$(rustc --print sysroot)/share/zsh/site-functions/_cargo" "$ZSH_RUST_DIR/_cargo"
 
 # Add completions to the FPATH
