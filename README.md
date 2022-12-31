@@ -5,6 +5,6 @@ A simple zsh plugin for the Rust programming language toolchain, including [`rus
 Using the [:zap: Zap](https://www.zapzsh.org/) minimal zsh plugin manager, add the following to your `.zshrc`
 
 ```sh
-# Example install plugins
+# Install plugin
 plug "wintermi/zsh-rust"
 ```
