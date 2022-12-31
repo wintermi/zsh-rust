@@ -21,7 +21,7 @@ fi
 ZSH_RUST_DIR="${0:A:h}/completions"
 
 # Only regenerate completions if older than 24 hours, or does not exist
-if [[ ! -f "$ZSH_RUST_DIR/_rustup"  ||  $(find "$ZSH_RUST_DIR/_rustup" -mtime +24h -print) ]]; then
+if [[ ! -f "$ZSH_RUST_DIR/_rustup"  ||  ! $(find "completions/_rustup" -newermt "24 hours ago" -print) ]]; then
     rustup completions zsh rustup >| "$ZSH_RUST_DIR/_rustup"
     cp -f "$(rustc --print sysroot)/share/zsh/site-functions/_cargo" "$ZSH_RUST_DIR/_cargo"
 fi
