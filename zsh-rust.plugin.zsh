@@ -18,13 +18,14 @@ if ! (( $+commands[rustup] && $+commands[cargo] )); then
 fi
 
 # Completions directory for `rustup` and `cargo` commands
-ZSH_RUST_DIR="${0:A:h}/completions"
+COMPLETIONS_DIR="${0:A:h}/completions"
 
 # Only regenerate completions if older than 24 hours, or does not exist
-if [[ ! -f "$ZSH_RUST_DIR/_rustup"  ||  ! $(find "$ZSH_RUST_DIR/_rustup" -newermt "24 hours ago" -print) ]]; then
-    rustup completions zsh rustup >| "$ZSH_RUST_DIR/_rustup"
-    cp -f "$(rustc --print sysroot)/share/zsh/site-functions/_cargo" "$ZSH_RUST_DIR/_cargo"
+if [[ ! -f "$COMPLETIONS_DIR/_rustup"  ||  ! $(find "$COMPLETIONS_DIR/_rustup" -newermt "24 hours ago" -print) ]]; then
+    rustup completions zsh rustup >| "$COMPLETIONS_DIR/_rustup"
+    cp -f "$(rustc --print sysroot)/share/zsh/site-functions/_cargo" "$COMPLETIONS_DIR/_cargo"
 fi
 
 # Add completions to the FPATH
-fpath=("$ZSH_RUST_DIR" $fpath)
+typeset -TUx FPATH fpath
+fpath=("$COMPLETIONS_DIR" $fpath)
