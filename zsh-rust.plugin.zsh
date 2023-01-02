@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env zsh
 # shellcheck disable=SC1090
 
 # Exit if the .cargo/bin directory does not exist
