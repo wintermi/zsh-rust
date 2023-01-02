@@ -11,9 +11,9 @@ fi
 typeset -TUx PATH path
 path=("$HOME/.cargo/bin" $path)
 
-# Exit if the 'rustup' or 'cargo' commands can not be found
-if ! (( $+commands[rustup] && $+commands[cargo] )); then
-    echo "ERROR: 'rustup' or 'cargo' commands not found"
+# Exit if the 'rustup', 'rustc' or 'cargo' command can not be found
+if ! (( $+commands[rustup] && $+commands[rustc] && $+commands[cargo] )); then
+    echo "ERROR: 'rustup', 'rustc' or 'cargo' command not found"
     return
 fi
 
