@@ -18,7 +18,7 @@ if ! (( $+commands[rustup] && $+commands[rustc] && $+commands[cargo] )); then
 fi
 
 # Completions directory for `rustup` and `cargo` commands
-COMPLETIONS_DIR="${0:A:h}/completions"
+local COMPLETIONS_DIR="${0:A:h}/completions"
 
 # Only regenerate completions if older than 24 hours, or does not exist
 if [[ ! -f "$COMPLETIONS_DIR/_rustup"  ||  ! $(find "$COMPLETIONS_DIR/_rustup" -newermt "24 hours ago" -print) ]]; then
