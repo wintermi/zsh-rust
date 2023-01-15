@@ -10,7 +10,7 @@ plug "wintermi/zsh-rust"
 ```
 
 ## Prerequisite Checks
-A number of simple checks are performed to verify the following Go programming language tools have been installed:
+A number of simple checks are performed to verify the following Rust programming language tools have been installed:
 
 - [`rustup`](https://rustup.rs/) - Installer for the Rust programming language
 - [`rustc`](https://www.rust-lang.org/) - The Rust programming language
