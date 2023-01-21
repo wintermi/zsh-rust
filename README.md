@@ -1,5 +1,5 @@
 # zsh-rust
-A simple zsh plugin for the Rust programming language toolchain.
+A zsh plugin for the Rust programming language toolchain.
 
 ## Install
 Using the [:zap: Zap](https://www.zapzsh.org/) minimal zsh plugin manager, add the following to your `.zshrc`
@@ -10,7 +10,7 @@ plug "wintermi/zsh-rust"
 ```
 
 ## Prerequisite Checks
-A number of simple checks are performed to verify the following Rust programming language tools have been installed:
+A number of checks are performed to verify the following Rust programming language tools have been installed:
 
 - [`rustup`](https://rustup.rs/) - Installer for the Rust programming language
 - [`rustc`](https://www.rust-lang.org/) - The Rust programming language
