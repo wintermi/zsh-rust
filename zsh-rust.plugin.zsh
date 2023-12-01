@@ -20,7 +20,7 @@ fi
 # Completions directory for `rustup` and `cargo` commands
 local COMPLETIONS_DIR="${0:A:h}/completions"
 
-# Only regenerate completions if older than 24 hours, or does not exist
+# Only regenerate completions if older than 7 days, or does not exist
 if [[ ! -f "$COMPLETIONS_DIR/_rustup"  ||  ! $(find "$COMPLETIONS_DIR/_rustup" -newermt "7 days ago" -print) ]]; then
     rustup completions zsh rustup >| "$COMPLETIONS_DIR/_rustup"
     cat "$(rustc --print sysroot)/share/zsh/site-functions/_cargo" >| "$COMPLETIONS_DIR/_cargo"
