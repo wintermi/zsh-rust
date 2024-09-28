@@ -3,7 +3,6 @@
 
 # Exit if the .cargo/bin directory does not exist
 if [ ! -d "$HOME/.cargo/bin" ]; then
-    echo 'WARNING: $HOME/.cargo/bin directory not found'
     return
 fi
 
@@ -13,7 +12,6 @@ path=("$HOME/.cargo/bin" $path)
 
 # Exit if the 'rustup', 'rustc' or 'cargo' commands can not be found
 if ! (( $+commands[rustup] && $+commands[rustc] && $+commands[cargo] )); then
-    echo "WARNING: 'rustup', 'rustc' or 'cargo' commands not found"
     return
 fi
 
